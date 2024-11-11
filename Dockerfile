@@ -1,11 +1,14 @@
-# Usamos una imagen oficial de Perl
+# Dockerfile
 FROM perl:latest
 
-# Establecer directorio de trabajo
-WORKDIR /app
+# Copy app to container
+COPY app.pl /app.pl
 
-# Copiar el código fuente al contenedor
-COPY app.pl .
+# Install dependencies
+RUN cpanm HTTP::Server::Simple::CGI
 
-# Comando para ejecutar el programa
-CMD ["perl", "app.pl"]
+# Expose port 8080 for web access
+EXPOSE 8080
+
+# Run the application
+CMD ["perl", "/app.pl"]
