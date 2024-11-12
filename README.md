@@ -1,5 +1,7 @@
 # Perl Docker App 🐪🚀
 
+# APP DEPLY IN RAILWAY: https://perl-app-production-wvargas.up.railway.app/
+
 **Perl Docker App** is a simple Perl application that prints **"Hello from Perl!"** to the console. This project is containerized with Docker, making it easy to deploy and run across different environments. 🌍
 
 ## Project Structure 📁
